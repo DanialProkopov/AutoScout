@@ -1,15 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/registration.css">
-    <title>Registration</title>
-</head>
-<body>
-    <h1>Registration Page</h1>
-    
-    <script src="scripts/registration.js"></script>
-</body>
-</html>
+<HTML> 
+    <HEAD> 
+    <TITLE>Реєстрація</TITLE> 
+    <meta http-equiv="Content-type"content="text/html;charset=windows-1251"> 
+     
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <style> 
+            body { 
+                font-family: Arial, sans-serif; 
+     background-image: url('https://img.freepik.com/free-vector/minimalist-white-background_23-2148811075.jpg'); 
+            background-size: cover; 
+                background-position: center; 
+     
+     } 
+     
+             form { 
+                background-color: rgba(255, 255, 255, 0.8); /* Прозрачный белый фон формы */ 
+               padding: 20px; 
+                border-radius: 10px; 
+                text-align: center; /* Выравнивание текста по центру */ 
+                position: relative; /* Абсолютное позиционирование */ 
+                top: 0%; /* Положение относительно верхнего края */ 
+                left: 0%; /* Положение относительно левого края */ 
+                transform: translate(-0%, 30%); /* Центрирование формы по центру экрана */  
+         flex-direction: column; /* Элементы будут располагаться вертикально (по колонкам) */ 
+    } 
+     
+            label{ 
+                display: block; 
+                margin-bottom: 10px; 
+          text-align: center;  
+            } 
+     input { 
+                width: 15%; /* Ширина 100% от родительского контейнера */ 
+                box-sizing: border-box; /* Ширина и высота включают границы и отступы в общий размер элемента */ 
+                padding: 10px; /* Внутренний отступ для визуального комфорта */ 
+            } 
+     
+            #changePage { 
+                position: absolute; /* Абсолютное позиционирование */ 
+                top: 10px; /* Отступ сверху */ 
+                left: 10px; /* Отступ */ 
+                text-align: left; /* Выравнивание текста по краю */ 
+                text-decoration: none; 
+            } 
+     
+    #logo-container { 
+                position: absolute; 
+                top: 10px; 
+                left: 10px; 
+            } 
+     
+            #logo { 
+                width: 50px; /* Задайте желаемую ширину изображения */ 
+                height: 50px; /* Задайте желаемую высоту изображения */ 
+                border-radius: 50%; /* Для создания круглого изображения */ 
+            } 
+     
+        </style> 
+    </head> 
+    <body> 
+     
+    <div id="logo-container"> 
+                <a href="Registration.html"> 
+                    <img id="logo" src="https://w7.pngwing.com/pngs/131/677/png-transparent-arrow-icon-arrow-symbol-text-logo-computer-wallpaper-thumbnail.png" alt="Вернуться на главную"> 
+                </a> 
+            </div> 
+     
+        <form action="/register" method="post" text-align: right> 
+     
+    <a text-align: right id="changePage" href="main.html">Вернутся</a> 
+     
+            <label for="email">Електронна пошта:</label> 
+            <input type="email" id="email" name="email" required> 
+     
+            <label for="username">Логін:</label> 
+            <input type="text" id="username" name="username" required> 
+     
+           <label for="password">Пароль (от 6 до 20 символов):</label> 
+            <input type="password" id="password" name="password" minlength="6" maxlength="20" required> 
+     
+    <label for="showPassword">Показать пароль:</label> 
+            <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()"> 
+                   
+     
+            <button type="submit" href="welcome.html">Зарегистрироваться</button> 
+     <script> 
+            function togglePasswordVisibility() { 
+                var passwordInput = document.getElementById("password"); 
+                passwordInput.type = (passwordInput.type === "password") ? "text" : "password"; 
+            } 
+     
+        </script> 
+     
+        </form> 
+     
+    </body> 
+    </html>
 
